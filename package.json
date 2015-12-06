@@ -1,0 +1,14 @@
+{
+  "name": "fis3-parser-replace",
+  "version": "1.0.0",
+  "description": "fis3文本替换",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis3"
+  ],
+  "author": "zhrren",
+  "license": "MIT"
+}
