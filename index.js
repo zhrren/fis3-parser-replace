@@ -7,8 +7,8 @@
 
 module.exports = function (content, file, conf) {
 
-  //log.debug("content");
-  var result = content;
+  //log.debug("content");// 兼容content为buffer的情况
+  var result = content.toString();
   if (!file.isText())
     return result;
 
