@@ -18,7 +18,11 @@ module.exports = function (content, file, conf) {
 
   for (var i = 0; i < opts.rules.length; i++) {
     var rule = opts.rules[i];
-    result = result.replace(rule.search, rule.replace);
+    if(typeof rule.replace === 'function'){
+      result = result.replace(rule.search, rule.replace.bind(file));
+    }else{
+      result = result.replace(rule.search, rule.replace);
+    }
   }
 
   return result;
